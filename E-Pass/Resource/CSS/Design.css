@@ -1,0 +1,300 @@
+/*rgb(211, 214, 216);*/
+
+/*-------------------------------*/
+/*BASE*/
+/*-------------------------------*/
+/*Basic Design*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*Components*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/*H Tags*/
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0px 0px;
+    text-align: left;
+    color: #fff;
+    font-family: 'font';
+    font-size: 600%;
+    word-spacing: 4px;
+    letter-spacing: 10px;
+}
+
+h2 {
+    font-size: 180%;
+    color: #000;
+    margin-bottom: 50px;
+    word-spacing: 2px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'font';
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: rgb(211, 214, 216);
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+@font-face {
+    font-family: font;
+    src: url(Font/Westfalia-Regular.otf);
+}
+
+/*-------------------------------*/
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*Header Section*/
+/*-------------------------------*/
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(Images/BG-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.nav {
+    font-size: 80%;
+    float: right;
+}
+
+.nav li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 35px;
+    letter-spacing: 1px;
+    transition: all 500ms ease-in-out;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav li:hover {
+    font-size: 100%;
+    letter-spacing: 1px;
+}
+
+.nav li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    border-bottom: 3px solid #fff;
+    transform: scale(0,1);
+    transition: all 500ms ease-in-out;
+}
+
+.nav li:hover::after {
+    transform: scale(0,1);
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-text {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 38%;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*Section-1*/
+/*-------------------------------*/
+section {
+    background-color: rgb(211, 214, 216);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(211, 214, 216);
+    position: relative; 
+    margin-left: 40px;
+    margin-right:40px;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background-color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.front img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    height: 100%;
+    width: 100%;
+}
+
+.back h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back p {
+    padding: 25px;
+    padding-top: 15px;
+    font-size: 80%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 20px;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*Section-2*/
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*-------------------------------*/
+
+/*-------------------------------*/
+/*Footer*/
+/*-------------------------------*/
+footer {
+    background-color: #2c3e50;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 80%;
+}
+
+.terms,
+.news-letter,
+.social-media {
+    color: #fff;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 10px;
+}
+
+.news-letter {
+    margin-top: 5%;
+}
+
+.news-letter h3:after {
+    margin-top: 5px;
+    width: 0;
+}
+
+.news-letter li input {
+    width: 150px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 80%;
+}
+
+.terms li,
+.news-letter li,
+.social-media li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.terms li a,
+.news-letter li a,
+.social-media li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.terms,
+.social-media {
+    border-top: solid 1px #fff;
+    padding-top: 55px;
+    margin-bottom: 5px;
+}
+
+.last {
+    text-align: center;
+    color: #fff;
+    font-size: 80%;
+    padding-bottom: 35px;
+    padding-top: 25px;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+
+.chart {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

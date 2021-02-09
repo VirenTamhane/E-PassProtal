@@ -1,0 +1,55 @@
+/*Basic Design*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+section {
+    background-color: rgb(211, 214, 216);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.Search-bar {
+    text-align: center;
+    padding: 50px;   
+}
+
+.nav {
+    font-size: 80%;
+    float: right;
+}
+
+.nav li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 35px;
+    letter-spacing: 1px;
+    transition: all 500ms ease-in-out;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #555;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
